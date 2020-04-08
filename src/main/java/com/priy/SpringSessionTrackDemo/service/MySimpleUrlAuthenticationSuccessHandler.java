@@ -23,12 +23,10 @@ public class MySimpleUrlAuthenticationSuccessHandler implements AuthenticationSu
       throws IOException {
         HttpSession session = request.getSession(false);
         if (session != null) {
-        	System.out.println(request.getContextPath());
             LoggedUser user = new LoggedUser(authentication.getName(), activeUserStore);
             session.setAttribute("user", user);
-            //response.sendRedirect("/SpringSessionTrackDemo/index.jsp");
             if(activeUserStore.getUsers().size()>2) {
-            	response.sendRedirect(request.getContextPath()+"/clogout");
+            	response.sendRedirect(request.getContextPath()+"/retry");
             }else
             	response.sendRedirect(request.getContextPath()+"/welcome");
         }

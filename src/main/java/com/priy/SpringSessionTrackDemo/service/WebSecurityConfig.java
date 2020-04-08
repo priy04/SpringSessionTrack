@@ -28,11 +28,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
   public UserDetailsService userDetailsService() {  
       InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();  
       manager.createUser(User.withDefaultPasswordEncoder()  
-      .username("priy").password("priy123").roles("ADMIN").build());  
+      .username("user1").password("user1").roles("ADMIN").build());  
       manager.createUser(User.withDefaultPasswordEncoder()  
-      .username("ranjan").password("ranjan123").roles("ADMIN").build()); 
+      .username("user2").password("user2").roles("ADMIN").build()); 
       manager.createUser(User.withDefaultPasswordEncoder()  
-      .username("cbdt").password("cbdt123").roles("ADMIN").build()); 
+      .username("user3").password("user3").roles("ADMIN").build()); 
       return manager;  
   }  
     

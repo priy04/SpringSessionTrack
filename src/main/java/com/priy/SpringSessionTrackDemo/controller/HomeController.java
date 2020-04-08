@@ -78,10 +78,9 @@ public class HomeController {
     @GetMapping("/loggedUsers")
     public String getLoggedUsers(Locale locale, Model model) {
         model.addAttribute("users", activeUserStore.getUsers());
-       // model.addAttribute("users", SessionCounterListener.getActiveSessionNumber());
         System.out.println("loggedUsers : "+ activeUserStore.getUsers());
-        SecurityContext context = SecurityContextHolder.getContext();
-        System.out.println("You are logged in as " + context.getAuthentication().getName());
+//        SecurityContext context = SecurityContextHolder.getContext();
+//        System.out.println("You are logged in as " + context.getAuthentication().getName());
         return "users";
     }
 }  
