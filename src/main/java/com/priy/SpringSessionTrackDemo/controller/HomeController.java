@@ -30,7 +30,7 @@ public class HomeController {
     public String index(Model model) {  
     	 SecurityContext context = SecurityContextHolder.getContext();
     	model.addAttribute("name", context.getAuthentication().getName());
-
+        System.out.println("loggedUsers Welcome: ");
         return "welcome";  
     }  
     
