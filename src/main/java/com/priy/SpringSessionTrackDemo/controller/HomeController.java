@@ -81,6 +81,7 @@ public class HomeController {
         model.addAttribute("users", activeUserStore.getUsers());
         System.out.println("loggedUsers : "+ activeUserStore.getUsers());
         System.out.println("loggedUsers 1: "+ activeUserStore.getUsers());
+        
 //        SecurityContext context = SecurityContextHolder.getContext();
 //        System.out.println("You are logged in as " + context.getAuthentication().getName());
         return "users";
